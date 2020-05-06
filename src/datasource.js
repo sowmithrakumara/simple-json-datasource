@@ -71,16 +71,6 @@ export class GenericDatasource {
     });
   }
 
-  mapToTextValue(result) {
-    return _.map(result.data, (d, i) => {
-      if (d && d.text && d.value) {
-        return { text: d.text, value: d.value };
-      } else if (_.isObject(d)) {
-        return { text: d, value: i};
-      }
-      return { text: d, value: d };
-    });
-  }
 
   doRequest(options) {
     options.withCredentials = this.withCredentials;
@@ -97,7 +87,7 @@ export class GenericDatasource {
 
     var targets = _.map(options.targets, target => {
       return {
-        target: this.templateSrv.replace(target.target, options.scopedVars, 'regex'),
+        target: 'upload_1_static',
         refId: target.refId,
         hide: target.hide,
         type: 'timeserie'
