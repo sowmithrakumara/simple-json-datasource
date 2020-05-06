@@ -75,12 +75,7 @@ export class GenericDatasource {
     var interpolated = {
         target: this.templateSrv.replace(query, null, 'regex')
     };
-    return this.mapToTextValue
-//    return this.doRequest({
-//      url: this.url + '/search',
-//      data: interpolated,
-//      method: 'POST',
-//    }).then(this.mapToTextValue);
+    return { text: 'upload_1_static', value: 'upload_1_static'}
   }
 
   mapToTextValue(result) {
