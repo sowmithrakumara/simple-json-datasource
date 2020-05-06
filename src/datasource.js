@@ -18,6 +18,7 @@ export class GenericDatasource {
 
   query(options) {
     var query = this.buildQueryParameters(options);
+    console.log(query);
     query.targets = query.targets.filter(t => !t.hide);
 
     if (query.targets.length <= 0) {
@@ -103,16 +104,10 @@ export class GenericDatasource {
 
   buildQueryParameters(options) {
     //remove placeholder targets
-    options.targets = _.filter(options.targets, target => {
-      return target.target !== 'select metric';
-    });
 
     var targets = _.map(options.targets, target => {
       return {
-        target: this.templateSrv.replace(target.target, options.scopedVars, 'regex'),
-        refId: target.refId,
-        hide: target.hide,
-        type: target.type || 'timeserie'
+        target: this.templateSrv
       };
     });
 
