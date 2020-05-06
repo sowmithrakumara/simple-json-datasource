@@ -61,16 +61,6 @@ describe('GenericDatasource', function() {
             return data;
         }
 
-        ctx.ds.metricFindQuery({target: null}).then(function(result) {
-            expect(result).to.have.length(3);
-            expect(result[0].text).to.equal('metric_0');
-            expect(result[0].value).to.equal('metric_0');
-            expect(result[1].text).to.equal('metric_1');
-            expect(result[1].value).to.equal('metric_1');
-            expect(result[2].text).to.equal('metric_2');
-            expect(result[2].value).to.equal('metric_2');
-            done();
-        });
     });
 
     it ('should return the metric target results when a target is set', function(done) {
@@ -183,18 +173,7 @@ describe('GenericDatasource', function() {
         });
     });
 
-    it ('should return data as text and as value', function(done) {
-        var result = ctx.ds.mapToTextValue({data: ["zero", "one", "two"]});
 
-        expect(result).to.have.length(3);
-        expect(result[0].text).to.equal('zero');
-        expect(result[0].value).to.equal('zero');
-        expect(result[1].text).to.equal('one');
-        expect(result[1].value).to.equal('one');
-        expect(result[2].text).to.equal('two');
-        expect(result[2].value).to.equal('two');
-        done();
-    });
 
     it ('should return text as text and value as value', function(done) {
         var data = [
