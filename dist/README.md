@@ -1,4 +1,4 @@
-## Simple JSON Datasource - a generic backend datasource
+## BMC Datasource - a generic backend datasource
 
 More documentation about datasource plugins can be found in the [Docs](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/developing/datasources.md).
 
@@ -56,11 +56,11 @@ Example `timeserie` request
      { "target": "upper_50", "refId": "A", "type": "timeserie" },
      { "target": "upper_75", "refId": "B", "type": "timeserie" }
   ],
-  "adhocFilters": [
-    "key": "City"
+  "adhocFilters": [{
+    "key": "City",
     "operator": "=",
     "value": "Berlin"
-  ]
+  }],
   "format": "json",
   "maxDataPoints": 550
 }

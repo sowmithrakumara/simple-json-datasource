@@ -1,37 +1,19 @@
-'use strict';
+import {GenericDatasource} from './datasource';
+import {GenericDatasourceQueryCtrl} from './query_ctrl';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.AnnotationsQueryCtrl = exports.QueryOptionsCtrl = exports.ConfigCtrl = exports.QueryCtrl = exports.Datasource = undefined;
-
-var _datasource = require('./datasource');
-
-var _query_ctrl = require('./query_ctrl');
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var GenericConfigCtrl = function GenericConfigCtrl() {
-  _classCallCheck(this, GenericConfigCtrl);
-};
-
+class GenericConfigCtrl {}
 GenericConfigCtrl.templateUrl = 'partials/config.html';
 
-var GenericQueryOptionsCtrl = function GenericQueryOptionsCtrl() {
-  _classCallCheck(this, GenericQueryOptionsCtrl);
-};
-
+class GenericQueryOptionsCtrl {}
 GenericQueryOptionsCtrl.templateUrl = 'partials/query.options.html';
 
-var GenericAnnotationsQueryCtrl = function GenericAnnotationsQueryCtrl() {
-  _classCallCheck(this, GenericAnnotationsQueryCtrl);
+class GenericAnnotationsQueryCtrl {}
+GenericAnnotationsQueryCtrl.templateUrl = 'partials/annotations.editor.html'
+
+export {
+  GenericDatasource as Datasource,
+  GenericDatasourceQueryCtrl as QueryCtrl,
+  GenericConfigCtrl as ConfigCtrl,
+  GenericQueryOptionsCtrl as QueryOptionsCtrl,
+  GenericAnnotationsQueryCtrl as AnnotationsQueryCtrl
 };
-
-GenericAnnotationsQueryCtrl.templateUrl = 'partials/annotations.editor.html';
-
-exports.Datasource = _datasource.GenericDatasource;
-exports.QueryCtrl = _query_ctrl.GenericDatasourceQueryCtrl;
-exports.ConfigCtrl = GenericConfigCtrl;
-exports.QueryOptionsCtrl = GenericQueryOptionsCtrl;
-exports.AnnotationsQueryCtrl = GenericAnnotationsQueryCtrl;
-//# sourceMappingURL=module.js.map

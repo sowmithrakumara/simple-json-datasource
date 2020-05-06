@@ -1,4 +1,4 @@
-## Simple JSON Datasource - a generic backend datasource
+## BMC Datasource - a generic backend datasource
 
 More documentation about datasource plugins can be found in the [Docs](https://github.com/grafana/grafana/blob/master/docs/sources/plugins/developing/datasources.md).
 
