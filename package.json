@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grafana/simple-json-datasource.git"
+    "url": "git+https://github.com/sowmithrakumara/simple-json-datasource.git"
   },
   "author": "",
   "license": "MIT",
@@ -42,5 +42,5 @@
   "dependencies": {
     "lodash": "^4.17.4"
   },
-  "homepage": "https://github.com/grafana/simple-json-datasource#readme"
+  "homepage": "https://github.com/sowmithrakumara/simple-json-datasource#readme"
 }

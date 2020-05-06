@@ -21,11 +21,10 @@
       "large": "img/bmc_logo.svg"
     },
     "links": [
-      {"name": "GitHub", "url": "https://github.com/grafana/simple-json-datasource"},
-      {"name": "MIT License", "url": "https://github.com/grafana/simple-json-datasource/blob/master/LICENSE"}
+      {"name": "GitHub", "url": "https://github.com/sowmithrakumara/simple-json-datasource"}
     ],
     "version": "1.4.0",
-    "updated": "2018-06-20"
+    "updated": "2020-05-06"
   },
 
   "dependencies": {
