@@ -72,9 +72,6 @@ export class GenericDatasource {
   }
 
   metricFindQuery(query) {
-    var interpolated = {
-        target: this.templateSrv.replace(query, null, 'regex')
-    };
     return { text: 'upload_1_static', value: 'upload_1_static'}
   }
 
