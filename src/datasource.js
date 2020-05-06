@@ -75,12 +75,12 @@ export class GenericDatasource {
     var interpolated = {
         target: this.templateSrv.replace(query, null, 'regex')
     };
-
-    return this.doRequest({
-      url: this.url + '/search',
-      data: interpolated,
-      method: 'POST',
-    }).then(this.mapToTextValue);
+    return this.mapToTextValue
+//    return this.doRequest({
+//      url: this.url + '/search',
+//      data: interpolated,
+//      method: 'POST',
+//    }).then(this.mapToTextValue);
   }
 
   mapToTextValue(result) {
@@ -112,7 +112,7 @@ export class GenericDatasource {
         target: this.templateSrv.replace(target.target, options.scopedVars, 'regex'),
         refId: target.refId,
         hide: target.hide,
-        type: target.type || 'timeserie'
+        type: 'timeserie'
       };
     });
 
