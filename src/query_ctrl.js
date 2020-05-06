@@ -11,10 +11,6 @@ export class GenericDatasourceQueryCtrl extends QueryCtrl {
     this.target.type = 'timeserie';
   }
 
-  getOptions(query) {
-    return this.datasource.metricFindQuery(query || '');
-  }
-
   toggleEditorMode() {
     this.target.rawQuery = !this.target.rawQuery;
   }

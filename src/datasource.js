@@ -71,10 +71,6 @@ export class GenericDatasource {
     });
   }
 
-  metricFindQuery(query) {
-    return { text: 'upload_1_static', value: 'upload_1_static'}
-  }
-
   mapToTextValue(result) {
     return _.map(result.data, (d, i) => {
       if (d && d.text && d.value) {
