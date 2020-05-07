@@ -82,7 +82,8 @@ export class GenericDatasource {
           data: interpolated,
           method: 'POST',
         }).then(this.mapToTextValue);*/
-    return [{ text: 'upper_25', value: 'upper_25'}];
+    // return [{ text: 'upper_25', value: 'upper_25'}];
+    return []
   }
 
   mapToTextValue(result) {
