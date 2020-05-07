@@ -71,9 +71,9 @@ export class GenericDatasource {
     });
   }
 
-    var dummySearch = new Promise(function(resolve, reject){
+    /*var dummySearch = new Promise(function(resolve, reject){
         resolve([{ text: 'upper_25', value: 'upper_25'}]);
-    });
+    })*/
 
   metricFindQuery(query) {
     var interpolated = {
