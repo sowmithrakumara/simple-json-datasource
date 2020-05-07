@@ -71,16 +71,17 @@ export class GenericDatasource {
     });
   }
 
+    var dummySearch = new Promise(function(resolve, reject){
+        resolve([{ text: 'upper_25', value: 'upper_25'}]);
+    });
+
   metricFindQuery(query) {
     var interpolated = {
         target: this.templateSrv.replace(query, null, 'regex')
     };
 
-    return this.doRequest({
-      url: this.url + '/search',
-      data: interpolated,
-      method: 'POST',
-    }).then(this.mapToTextValue);
+    // return dummySearch.then(this.mapToTextValue);
+    return [{ text: 'upper_25', value: 'upper_25'}];
   }
 
   mapToTextValue(result) {
