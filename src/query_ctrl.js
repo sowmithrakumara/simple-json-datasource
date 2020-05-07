@@ -7,8 +7,9 @@ export class GenericDatasourceQueryCtrl extends QueryCtrl {
     super($scope, $injector);
 
     this.scope = $scope;
-    this.target.target = this.target.target || 'select metric';
+    // this.target.target = this.target.target || 'select metric';
     // this.target.type = this.target.type || 'timeserie';
+    this.target.target = this.target.target || 'select metric';
     this.target.type = 'timeserie';
   }
 
